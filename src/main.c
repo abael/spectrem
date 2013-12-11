@@ -112,7 +112,7 @@ static int plot_spectrum(const char *filename_png)
 
 		unsigned h;
 
-		h = (sz.h-1) * 1.0 * magv[x] / peak_mag;
+		h = (unsigned)((sz.h-1) * 1.0 * magv[x] / peak_mag);
 
 		vidframe_draw_vline(vf, x, sz.h-1-h, h, 255, 0, 0);
 	}
